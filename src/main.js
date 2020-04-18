@@ -12,4 +12,21 @@ game.settings = {
 }
 
 // reserve some keyboard variables
-let keyF, keyLEFT, keyRIGHT;
+let keyUP, keyLEFT, keyRIGHT, keyUP2, keyLEFT2, keyRIGHT2;
+var text;
+var timedEvent;
+// score display
+let scoreConfig = {
+    fontFamily: 'Courier',
+    fontSize: '28px',
+    backgroundColor: '#F3B141',
+    color: '#843605',
+    align: 'right',
+    padding: {
+        top: 5,
+        bottom: 5,
+    },
+    fixedWidth: 100
+}
+var setTime;
+var spaceTime;
