@@ -1,3 +1,11 @@
+/*
+Eugene Shin
+Implement the speed increase that happens after 30 seconds in the original game (10)
+Display the time remaining (in seconds) on the screen (15)
+Implement a new timing/scoring mechanism that adds time to the clock for successful hits (25)
+Implement a simultaneous two-player mode (50)
+100 total points
+*/
 let config = {
     type: Phaser.CANVAS,
     width: 640,
