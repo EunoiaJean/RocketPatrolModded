@@ -60,7 +60,7 @@ class Menu extends Phaser.Scene {
             gameTimer: 45000    
           }
           setTime = 45000;
-          spacetime = 4;
+          spaceTime = 4;
           this.sound.play('sfx_select');
           this.scene.start("playScene");    
         }

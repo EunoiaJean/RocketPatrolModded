@@ -65,7 +65,7 @@ class Play extends Phaser.Scene {
         text = this.add.text(game.config.width/2, 60, formatTime(game.settings.gameTimer), scoreConfig);
 
         // Each 1000 ms call onEvent
-        timedEvent = this.time.addEvent({ delay: 1000, callback: onEvent, callbackScope: this, repeat: game.settings.gameTimer/1000-1 });
+        timedEvent = this.time.addEvent({ delay: 1000, callback: onEvent, callbackScope: this, repeat: game.settings.gameTimer });
 
         //after 30 seconds speed up
         let speed = this.time.delayedCall(30000, () => { game.settings.spaceshipSpeed *=2; }, null, this)
@@ -142,6 +142,7 @@ class Play extends Phaser.Scene {
         if(game.settings.gameTimer <=0 )
         {
         scoreConfig.fixedWidth = 0;
+        text.setText(formatTime(0));
         this.add.text(game.config.width/2, game.config.height/2, 'GAME OVER', scoreConfig).setOrigin(0.5);
         this.add.text(game.config.width/2, game.config.height/2 + 64, 'Fire to Restart or <- for Menu', scoreConfig).setOrigin(0.5);
         this.gameOver=true;
